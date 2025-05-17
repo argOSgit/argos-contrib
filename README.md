@@ -10,7 +10,7 @@ Repositorio oficial: [https://github.com/argOSgit/argos-contrib](https://github.
 
 ## ¿Querés contribuir?
 
-Seguí los pasos para enviar tu herramienta de forma correcta:
+Seguí estos pasos para enviar tu herramienta:
 
 ### 1. Hacé fork del repositorio
 
@@ -19,7 +19,7 @@ Desde: [https://github.com/argOSgit/argos-contrib](https://github.com/argOSgit/a
 ### 2. Cloná tu fork en tu PC
 
 ```bash
-git clone git clone https://github.com/argOSgit/argos-contrib.git
+git clone https://github.com/TU_USUARIO/argos-contrib.git
 cd argos-contrib
 ```
 
@@ -30,13 +30,9 @@ git checkout contrib
 git pull origin contrib
 ```
 
-### 4. Creá una nueva rama para tu herramienta
+### 4. Creá tu carpeta con tu herramienta
 
-```bash
-git checkout -b mi_nueva_tool
-```
-
-### 5. Agregá tu herramienta en esta estructura:
+Agregá tu herramienta en esta estructura:
 
 ```
 herramientas/
@@ -48,6 +44,7 @@ herramientas/
 ```
 
 Ejemplo:
+
 ```
 herramientas/osint/mi_tool/
 ├── install.sh
@@ -55,18 +52,33 @@ herramientas/osint/mi_tool/
 └── usage.md
 ```
 
-### 6. Hacé commit y push a tu rama
+### 5. Hacé commit y push a tu fork
 
 ```bash
 git add .
 git commit -m "Agrego mi_tool en OSINT"
-git push origin mi_nueva_tool
+git push origin contrib
 ```
 
-### 7. Desde GitHub, creá un Pull Request hacia `contrib`
+### 6. Desde GitHub, creá un Pull Request hacia `contrib`
 
 - Nunca hagas PR directo a `main`
 - Solo se aceptan PRs contra la rama `contrib`
+
+---
+
+## ¿Querés trabajar solo con una herramienta?
+
+Si no querés clonar todo el repositorio, podés usar `sparse-checkout` para trabajar solo sobre una carpeta específica:
+
+```bash
+git clone --filter=blob:none --no-checkout https://github.com/argOSgit/argos-contrib.git
+cd argos-contrib
+git sparse-checkout init --cone
+git sparse-checkout set herramientas/osint/mi_tool
+```
+
+Esto te permite clonar únicamente la carpeta de tu herramienta sin descargar el resto.
 
 ---
 
@@ -74,7 +86,7 @@ git push origin mi_nueva_tool
 
 Nosotros vamos a:
 
-- Clonar tu rama en una VM de prueba
+- Clonar tu fork en una VM de prueba
 - Ejecutar `install.sh`
 - Validar que todo funcione
 - Hacer merge a `main` solo si está todo correcto
@@ -84,5 +96,3 @@ Nosotros vamos a:
 ## Contacto
 
 Para dudas o sugerencias, abrí un issue en el repositorio oficial o escribí en el canal oficial de ArgOS.
-
-Gracias por tu aporte a la comunidad.
