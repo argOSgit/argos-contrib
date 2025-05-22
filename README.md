@@ -30,9 +30,9 @@ git checkout contrib
 git pull origin contrib
 ```
 
-### 4. Creá tu carpeta con tu herramienta
+### 4. Creá una carpeta con la herramienta
 
-Agregá tu herramienta en esta estructura:
+Agregá la herramienta en esta estructura:
 
 ```
 herramientas/
@@ -56,7 +56,7 @@ herramientas/osint/mi_tool/
 
 ```bash
 git add .
-git commit -m "Agrego mi_tool en OSINT"
+git commit -m "Agrego tool en OSINT"
 git push origin contrib
 ```
 
@@ -75,10 +75,10 @@ Si no querés clonar todo el repositorio, podés usar `sparse-checkout` para tra
 git clone --filter=blob:none --no-checkout https://github.com/argOSgit/argos-contrib.git
 cd argos-contrib
 git sparse-checkout init --cone
-git sparse-checkout set herramientas/osint/mi_tool
+git sparse-checkout set herramientas/osint/tool
 ```
 
-Esto te permite clonar únicamente la carpeta de tu herramienta sin descargar el resto.
+Esto te permite clonar únicamente la carpeta de la herramienta sin descargar el resto.
 
 ---
 
