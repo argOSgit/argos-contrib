@@ -14,12 +14,21 @@ Seguí estos pasos para enviar tu herramienta:
 
 ### 1. Hacé fork del repositorio
 
-Desde: [https://github.com/argOSgit/argos-contrib](https://github.com/argOSgit/argos-contrib)
+Entrá a: [https://github.com/argOSgit/argos-contrib](https://github.com/argOSgit/argos-contrib)
+
+Hacé clic en el botón **Fork** (arriba a la derecha).  
+Elegí tu cuenta personal como destino del fork. GitHub va a crear una copia del repositorio en tu perfil, por ejemplo:
+
+```
+https://github.com/tu_usuario/argos-contrib
+```
 
 ### 2. Cloná tu fork en tu PC
 
+> Asegurate de clonar tu fork, no el repo original
+
 ```bash
-git clone https://github.com/argOSgit/argos-contrib.git
+git clone https://github.com/tu_usuario/argos-contrib.git
 cd argos-contrib
 ```
 
@@ -63,7 +72,7 @@ git push origin contrib
 ### 6. Desde GitHub, creá un Pull Request hacia `contrib`
 
 - Nunca hagas PR directo a `main`
-- Solo se aceptan PRs contra la rama `contrib`
+- Solo se aceptan PRs contra la rama `contrib` del repositorio original (`argOSgit`)
 
 ---
 
