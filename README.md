@@ -19,7 +19,7 @@ Desde: [https://github.com/argOSgit/argos-contrib](https://github.com/argOSgit/a
 ### 2. Cloná tu fork en tu PC
 
 ```bash
-git clone https://github.com/TU_USUARIO/argos-contrib.git
+git clone https://github.com/argOSgit/argos-contrib.git
 cd argos-contrib
 ```
 
